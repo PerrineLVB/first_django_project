@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars index</title>
+    <style>body { font-family: Arial, Helvetica, sans-serif;}</style>
+</head>
+
+<body>
+
+    <h1>Cars index</h1>
+
+{% if cars %}
+    <ul>
+        {% for car in cars %}
+            <li><a href="cars/{{ car.id }}">{{  car.brand }} - {{ car.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No cars found</p>
+{% endif %}
+
+</body>
+
+</html>
