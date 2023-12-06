@@ -9,7 +9,7 @@ def index(request):
     context = {'cars': cars}
     return render(request, 'index.html', context)
 
-def car_details(request):
-    car = Car.objects
+def car_details(request, pk):
+    car = Car.objects.get(pk=pk)
     context = {'car': car}
     return render(request, 'car_details.html', context)

@@ -8,6 +8,7 @@ class Car(models.Model):
     color = models.CharField(max_length=100)
     year = models.IntegerField()
     doors = models.IntegerField()
+    grade = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name
